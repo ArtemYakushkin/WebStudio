@@ -1,0 +1,82 @@
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 34px;
+  }
+}
+
+.filter__item {
+  margin-right: 8px;
+  margin-bottom: 15px;
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 480px) {
+    margin-right: 0;
+    margin-bottom: 0;
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+    &:nth-child(-n + 3) {
+      margin-bottom: 15px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &:nth-child(-n + 5) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.filter__btn {
+  font-family: inherit;
+  @include font(500, 16px, 1.62, 0.03em);
+  text-align: center;
+  color: var(--subject-color);
+  background-color: var(--team-color);
+  height: 38px;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--title-color);
+    background-color: var(--button-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.btn-all {
+  width: 73px;
+}
+
+.btn-site {
+  width: 128px;
+}
+
+.btn-application {
+  width: 145px;
+}
+
+.btn-design {
+  width: 103px;
+}
+
+.btn-marketing {
+  width: 130px;
+}
